@@ -1,1 +1,8 @@
+This JavaScript code demonstrates how WebRTC is implemented for video conferencing. It creates a peer-to-peer connection between two users in a room and displays their local and remote streams on a webpage.
+
+A few global variables, including isChannelReady, isInitiator, isStarted, localStream, pc, remoteStream, and turnReady, are first set by the code. The TURN/STUN server's configuration data is then initialized into the pcConfig variable.
+
+The user is then prompted for a room name, which is used to establish a connection with the signaling server using Socket.io. When a user enters a room name, the signaling server creates or joins the specified room after receiving a create or join event from the client.
+
+Next, some event handlers for the signaling server are defined in the code, including created, full, join, joined, and log. When the server creates a room, when a room is full, when a peer wants to join the room, when the current peer joins the room, and when the server logs a message, these handlers are used to log messages to the console.
 
